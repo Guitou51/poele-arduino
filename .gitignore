@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/__vm
+/poele.vcxproj.user
+/poele.vcxproj.filters
+/poele.vcxproj
+/sketch.json

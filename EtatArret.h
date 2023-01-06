@@ -1,0 +1,31 @@
+// EtatArret.h
+
+#ifndef _ETATARRET_h
+#define _ETATARRET_h
+
+#if defined(ARDUINO) && ARDUINO >= 100
+	#include "arduino.h"
+#else
+	#include "WProgram.h"
+#endif
+#include "IEtat.h"
+#include "EtatArreter.h"
+
+/*
+	Definition de l'état Arret
+*/
+class EtatArret : public IEtat
+{
+	IEtat* etatArreter;
+public:
+	EtatArret(IEtat* etatArreter, Relays* relays);
+	void setup();
+	IEtat* loop(unsigned long millis);
+	EtatEnum getEtat();
+	void onLeave(unsigned long millis);
+};
+
+
+
+#endif
+
