@@ -3,7 +3,7 @@
 
 
 const int VIS = 13;    // bleu
-const int VENTIL = 12; // rouge
+const int VENTIL = 10; // rouge
 const int BOUGIE = 11; // vert
 
 // const int FLAME_INPUT = 0;

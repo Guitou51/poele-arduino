@@ -16,6 +16,7 @@
 */
 class EtatArret : public IEtat
 {
+	const int DELAI_ARRET = 5 * 60000; //5 mins
 	IEtat* etatArreter;
 public:
 	EtatArret(IEtat* etatArreter, Relays* relays);

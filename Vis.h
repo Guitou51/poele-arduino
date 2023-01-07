@@ -15,10 +15,13 @@
 */
 class Vis
 {
- protected:
+ private:
 	 int pin;
 	 boolean isOn = false;
 	 RapportCyclic* rapportCyclic;
+
+
+	 const int PERIODE_VIS = 6000;
 
  public:
 	Vis(int pin);

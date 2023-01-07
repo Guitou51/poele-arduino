@@ -51,5 +51,11 @@ IEtat* EtatDemarrage::loop(unsigned long millis)
 
         return etatMarche;
     }
+
+
+    // if(temp > 80°){
+    // this->relays->ventillo->on();
+    // }
+
     return NULL;
 }

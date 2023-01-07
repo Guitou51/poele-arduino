@@ -18,7 +18,7 @@ IEtat* EtatArret::loop(unsigned long millis)
 {
 	unsigned long delta = millis - this->enterMillis;
 
-	if (delta > 10000) 
+	if (delta > DELAI_ARRET) 
 	{
 		return this->etatArreter;
 	}

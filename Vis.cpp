@@ -14,7 +14,7 @@ Vis::Vis(int pin)
 void Vis::setup()
 {
 	pinMode(this->pin, OUTPUT); // bleu
-	rapportCyclic = new RapportCyclic(3000, 1.0, this->pin);
+	rapportCyclic = new RapportCyclic(PERIODE_VIS, 1.0, this->pin);
 }
 
 void Vis::on()

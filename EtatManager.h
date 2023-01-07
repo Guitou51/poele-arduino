@@ -40,6 +40,5 @@ public:
 
     // éxecuter a chaque loop
     void loop(unsigned long ms);
-    // EtatEnum getCurrentEtat();
 };
 #endif
