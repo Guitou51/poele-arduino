@@ -19,13 +19,37 @@ class EtatArreter :public IEtat
 {
 private:
 	IEtat* etatDemarrage;
+
 public:
-	EtatArreter(Relays* relays);
-	void setup();
-	IEtat* loop(unsigned long millis);
-	EtatEnum getEtat();
-	IEtat* marcheArretClick(unsigned long ms);
-	void setEtatDemarrage(IEtat* etatDemarrage);
+	EtatArreter(Relays* relays)
+	{
+		this->relays = relays;
+	}
+
+	void setup()
+	{
+	}
+
+	IEtat* loop(unsigned long millis)
+	{
+		return NULL;
+	}
+
+	EtatEnum getEtat()
+	{
+		return ARRETER;
+	}
+
+	IEtat* marcheArretClick(unsigned long ms)
+	{
+		Serial.println("EtatArreter::marcheArretClick()");
+		return this->etatDemarrage;
+	}
+
+	void setEtatDemarrage(IEtat* etatDemarrage) 
+	{
+		this->etatDemarrage = etatDemarrage;
+	}
 };
 
 #endif

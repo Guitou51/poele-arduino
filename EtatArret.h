@@ -19,11 +19,32 @@ class EtatArret : public IEtat
 	const int DELAI_ARRET = 5 * 60000; //5 mins
 	IEtat* etatArreter;
 public:
-	EtatArret(IEtat* etatArreter, Relays* relays);
-	void setup();
-	IEtat* loop(unsigned long millis);
-	EtatEnum getEtat();
-	void onLeave(unsigned long millis);
+	EtatArret(IEtat* etatArreter, Relays* relays)
+	{
+		this->etatArreter = etatArreter;
+		this->relays = relays;
+	}
+	void setup()
+	{
+	}
+	IEtat* loop(unsigned long millis)
+	{
+		unsigned long delta = millis - this->enterMillis;
+
+		if (delta > DELAI_ARRET)
+		{
+			return this->etatArreter;
+		}
+		return NULL;
+	}
+	EtatEnum getEtat()
+	{
+		return ARRET;
+	}
+	void onLeave(unsigned long millis)
+	{
+		this->relays->ventillo->off();
+	}
 };
 
 

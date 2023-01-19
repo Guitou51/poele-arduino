@@ -21,16 +21,37 @@ private:
 
 public:
 	// Constructeur
-	Bougie(int pin);
+	Bougie(int pin)
+	{
+		this->pin = pin;
+	}
 
 	// appeler dans le setup
-	void setup();
+	void setup()
+	{
+		pinMode(this->pin, OUTPUT);
+	}
 
 	//allumer la bougie
-	void on();
+	void on()
+	{
+		if (!isOn) {
+			this->isOn = true;
+			Serial.println("bougie turn on");
+			digitalWrite(this->pin, HIGH);
+		}
+	}
 
 	// éteindre la bougie
-	void off();
+	void off()
+	{
+		if (isOn) {
+			this->isOn = false;
+			Serial.println("bougie turn off");
+			digitalWrite(this->pin, LOW);
+		}
+	}
+
 };
 
 

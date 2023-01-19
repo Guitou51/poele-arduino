@@ -15,7 +15,7 @@ si periode est 1000 ms et rapport est 0.2 alors temps ON = 200ms et temps OFF = 
 
 Modifier la periode dans 'Vis.s' modifer la valeur de PERIODE_VIS;
 
-Modifier le rapport en marche dans le fichier 'EtatMarche.cpp' fonction onEnter.
+Modifier le rapport en marche dans le fichier 'EtatMarche.h' fonction onEnter.
 
 
 ## Modifier le delai d'arret

@@ -4,6 +4,13 @@
 /*
 liste tous les état possibles
 */
+
+enum numerals_t : char {
+    Zero,
+    One,
+    Two,
+    Three
+};
 enum EtatEnum
 {
     //Démarrage
@@ -15,7 +22,7 @@ enum EtatEnum
     //arreter
     ARRETER,
     // A faire: gestion des erreur. Si probleme d'allumage ou manque de granulés pendant la marche etc...
-    ERREUR 
+    ERREUR
 };
 
 /*

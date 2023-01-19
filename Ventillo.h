@@ -19,10 +19,33 @@ protected:
 	boolean isOn = false;
 
 public:
-	Ventillo(int pin);
-	void setup();
-	void on();
-	void off();
+	Ventillo(int pin)
+	{
+		this->pin = pin;
+	}
+
+	void setup()
+	{
+		pinMode(this->pin, OUTPUT);
+	}
+
+	void on()
+	{
+		if (!isOn) {
+			this->isOn = true;
+			Serial.println("ventillo turn on");
+			digitalWrite(this->pin, HIGH);
+		}
+	}
+
+	void off()
+	{
+		if (isOn) {
+			this->isOn = false;
+			Serial.println("ventillo turn off");
+			digitalWrite(this->pin, LOW);
+		}
+	}
 };
 
 #endif

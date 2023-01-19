@@ -41,7 +41,7 @@ void setup()
 
 void loop()
 {
-    unsigned long ms = millis();
+    auto ms = millis();
     etatManager->loop(ms);
 }
 
